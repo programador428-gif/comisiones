@@ -8,14 +8,16 @@ function calcularComision(numeroVentas, precioProducto) {
 
 function calcular() {
   // Recuperar propiedades, agarrar su valor y pasarlo a un numero decimal.
-  let salarioBase = parseFloat(document.getElementById("txtSueldoBase").value);
-  let numeroVentas = parseFloat(document.getElementById("txtVentas").value);
-  let precioProducto = parseFloat(document.getElementById("txtPrecio").value);
+  let salarioBase = getValueByIdFloat("txtSueldoBase");
+  let numeroVentas = getValueByIdFloat("txtVentas");
+  let precioProducto = getValueByIdFloat("txtPrecio");
 
   let comision = calcularComision(numeroVentas, precioProducto);
   let total = salarioBase + comision;
 
-  document.getElementById("spSueldoBase").textContent = salarioBase;
-  document.getElementById("spComision").textContent = comision;
-  document.getElementById("spTotal").textContent = total;
+  mostrarMensaje("spSueldoBase", salarioBase);
+  mostrarMensaje("spComision", comision);
+  mostrarMensaje("spTotal", total);
 }
+
+$("#btnCalcular").addEventListener("click", calcular);
