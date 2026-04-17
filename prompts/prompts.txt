@@ -1,1 +1,25 @@
+Mejora del CSS 
+ 
  Rediseña este CSS con un estilo Neo - Brutalista en modo oscuro: usa bordes negros muy gruesos(4px), sombras sólidas sin desenfoque(tipo cómic) y colores neón para que resalte.Es vital que sea responsive(usa porcentajes y max - width) para que se vea perfecto en celular y PC.Mantén el fondo oscuro, añade efectos de 'botón hundido' al hacer clic y asegúrate de que los inputs ocupen todo el ancho 
+
+ Mejora de las validaciones
+
+ Actúa como desarrollador Senior de JavaScript. Usando mis archivos utils.js y ventas.js como base, quiero implementar validaciones con el evento blur (al perder el foco) en todos los inputs.
+
+Requisitos de validación:
+
+    Ventas: Si el número es menor a 0 o el texto tiene más de 5 caracteres, muestra una advertencia.
+
+    Salario y Precio: No pueden estar vacíos ni ser negativos.
+
+    Visual (Importante): No uses alert. Cuando un campo falle, usa el archivo ventas.css para poner el borde del input en color var(--neon-rosa) y añade un mensaje de error pequeño debajo del input usando una nueva función en utils.js llamada mostrarError(idInput, mensaje).
+
+    Limpieza: Al entrar de nuevo al input (onfocus), el color rosa y el mensaje de error deben desaparecer.
+
+    Interrupción: Si hay errores activos, el botón 'Calcular' debe quedar deshabilitado o mostrar un mensaje general de 'Revisa los campos'.
+
+Estructura:
+
+    Mantén el uso de mis 'helpers' como $(selector) y getValueByIdFloat.
+
+    Asegúrate de que las funciones sean accesibles desde el HTML si es necesario (vía window).
